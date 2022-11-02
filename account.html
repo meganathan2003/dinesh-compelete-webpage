@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="colors.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/3381415348.js"></script>
+    <link rel="icon" type="image/png" sizes="32x32" href="images/android-chrome-512x512.png">
+</head>
+
+<body>
+    <!-- HEADER BAR/NAV BAR -->
+
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <a href="redstore.html"><img src="images/logo.png" width="140px"></a>
+            </div>
+            <nav>
+                <ul id="Menu_items">
+                    <li><a href="redstore.html">Home</a></li>
+                    <li><a href="product.html">Products</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="account.html">Account</a></li>
+
+                </ul>
+            </nav>
+           <img src="images/cart.png" width="30px" height="30px">
+        </div>
+    </div>
+    <!-- -----------Account page------ -->
+    <div class="account-page">
+        <div class="container">
+            <div class="row">
+                <div class="col-1">
+                    <a href="redstore.html"> <img src="images/image1.png" width="100%"></a>
+                </div>
+                <div class="col-1">
+                    <div class="form-container">
+                        <div class="form-btn">
+                            <span onclick="login()">Login</span>
+                            <span onclick="register()">Register</span>
+                            <hr id="Indicator">
+                        </div>
+                        <form id="LoginForm">
+                            <input type="text" placeholder="Username">
+                            <input type="password" placeholder="Enter the Password">
+                            <button type="submit" class="btn">Login</button>
+                            <a href="">Forget Password</a>
+                        </form>
+                        <form id="RegForm">
+                            <input type="text" placeholder="Username">
+                            <input type="email" placeholder="Enter the Email">
+                            <input type="password" placeholder="Enter the Password">
+                            <button type="submit" class="btn">Register</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ----------Footer------ -->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Download Our Webpage</h3>
+                    <p>Download App for Andriod and ios mobile Phones</p>
+                    <div class="app_logo">
+                        <img src="images/play-store.png">
+                        <img src="images/app-store.png">
+                    </div>
+                </div>
+                <div class="footer-col-2">
+                    <img src="images/logo-white.png">
+                    <p>Our Purpose Is to Sustainably Make the Pleasure and Benefit of Sports Accessible to the Many.</p>
+                </div>
+                <div class="footer-col-3">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <li>Coupons</li>
+                        <li>Blog Post</li>
+                        <li>Return Policy</li>
+                        <li>Join Affiliate</li>
+                    </ul>
+                </div>
+                <div class="footer-col-4">
+                    <h3>Follow Us</h3>
+                    <ul>
+                        <li>Instagram</li>
+                        <li>Facebook</li>
+                        <li>Twitter</li>
+                        <li>YouTube</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="Copyright">&copy; Copyright 2020 - RedStore</p>
+        </div>
+    </div>
+    <!-- --------js for img changing------->
+    <script>
+        var ProductImg = document.getElementById("Product-Img");
+        var SmallImg = document.getElementsByClassName("small-img");
+        SmallImg[0].onclick = function () {
+            ProductImg.src = SmallImg[0].src;
+        }
+        SmallImg[1].onclick = function () {
+            ProductImg.src = SmallImg[1].src;
+        }
+        SmallImg[2].onclick = function () {
+            ProductImg.src = SmallImg[2].src;
+        }
+        SmallImg[3].onclick = function () {
+            ProductImg.src = SmallImg[3].src;
+        }
+    </script>
+    <!-- ---------js for toogle form------- -->
+    <script>
+        var LoginForm = document.getElementById("LoginForm");
+        var RegForm = document.getElementById("RegForm");
+        var Indicator = document.getElementById("Indicator");
+
+        function register() {
+            RegForm.style.transform = "translateX(0px)";
+            LoginForm.style.transform = "translate(0px)";
+            Indicator.style.transform = "translate(100px)";
+        }
+        function login() {
+            RegForm.style.transform = "translateX(300px)";
+            LoginForm.style.transform = "translateX(300px)";
+            Indicator.style.transform = "translate(0px)";
+
+        }
+
+
+    </script>
+</body>
+
+
+</html>
